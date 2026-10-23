@@ -1,0 +1,19 @@
+/*
+ * Fuente de Tailwind CSS. El resultado compilado es assets/styles.css, que es
+ * el que enlaza index.html. Tras cambiar clases en el HTML, regenerarlo con
+ * (ver README.md):
+ *
+ *   npx tailwindcss -i src/tailwind.css -o assets/styles.css --minify
+ */
+@import 'tailwindcss';
+
+@source '../index.html';
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Que la cabecera fija no tape el título de la sección al saltar desde el menú. */
+section[id] {
+  scroll-margin-top: 4rem;
+}
