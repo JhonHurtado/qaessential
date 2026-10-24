@@ -7,9 +7,11 @@ el despliegue: los ficheros del repositorio son el sitio.
 
 | Fichero | Qué es |
 | --- | --- |
-| `index.html` | La página |
+| `index.html` | La página (sin JavaScript: el menú móvil es un `<details>`) |
 | `assets/styles.css` | Tailwind compilado (generado, no editar a mano) |
-| `src/tailwind.css` | Fuente de Tailwind |
+| `src/tailwind.css` | Fuente de Tailwind: tipografía, tema y fondos de retícula |
+| `assets/fonts/` | Geist, autoalojada (licencia SIL OFL en `OFL-Geist.txt`) |
+| `assets/cityscout-*.webp` | Logo y pantallas reales de CityScout para el caso de estudio |
 | `app-ads.txt` | Vendedores autorizados de AdMob para las apps (CityScout) |
 | `robots.txt` | Permite rastrear todo el sitio |
 

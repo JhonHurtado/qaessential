@@ -1,289 +1,504 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Essential Coder · Desarrollo de software y calidad</title>
+    <title>Essential Coder · Apps y software a la medida, con calidad comprobada</title>
     <meta
       name="description"
-      content="Essential Coder diseña, desarrolla y prueba aplicaciones móviles y web. Somos los creadores de CityScout, la app para descubrir lo mejor de cada ciudad."
+      content="Essential Coder diseña, desarrolla y mantiene apps móviles, plataformas web y APIs con pruebas automatizadas en cada entrega. Creadores de CityScout."
     />
     <link rel="canonical" href="https://qaessential.dev/" />
     <meta name="theme-color" content="#ffffff" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://qaessential.dev/" />
     <meta property="og:site_name" content="Essential Coder" />
-    <meta property="og:title" content="Essential Coder · Desarrollo de software y calidad" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:title" content="Essential Coder · Software que funciona. Y lo probamos." />
     <meta
       property="og:description"
-      content="Diseñamos, desarrollamos y probamos aplicaciones móviles y web. Creadores de CityScout."
+      content="Apps móviles, plataformas web y APIs con pruebas automatizadas en cada entrega. Creadores de CityScout."
     />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
-  <body class="bg-white text-slate-700 antialiased">
+  <body class="bg-white font-sans text-zinc-600 antialiased selection:bg-emerald-200 selection:text-zinc-950">
     <a
       href="#contenido"
-      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-lg focus:bg-slate-900 focus:px-4 focus:py-2 focus:text-white"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-full focus:bg-zinc-950 focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-white"
       >Saltar al contenido</a
     >
 
-    <header class="sticky top-0 z-40 border-b border-slate-200/70 bg-white/85 backdrop-blur">
-      <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <a href="#inicio" class="flex items-center gap-2.5 font-semibold tracking-tight text-slate-900">
-          <img src="favicon.svg" alt="" width="32" height="32" class="h-8 w-8" />
-          Essential Coder
+    <!-- ───────────────────────── Cabecera ───────────────────────── -->
+    <header class="sticky top-0 z-50 border-b border-zinc-950/5 bg-white/80 backdrop-blur-xl">
+      <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <a href="#inicio" class="flex items-center gap-2.5 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-600" aria-label="Essential Coder, ir al inicio">
+          <svg class="size-8" viewBox="0 0 32 32" aria-hidden="true">
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#10b981" />
+                <stop offset="1" stop-color="#047857" />
+              </linearGradient>
+            </defs>
+            <rect width="32" height="32" rx="8" fill="url(#logo-gradient)" />
+            <g fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 10.5 4.5 16l5.5 5.5M22 10.5l5.5 5.5-5.5 5.5" />
+              <path d="m12.6 16.4 2.3 2.3 4.5-4.9" />
+            </g>
+          </svg>
+          <span class="text-[15px] font-semibold tracking-tight text-zinc-950">Essential Coder</span>
         </a>
-        <nav aria-label="Principal" class="flex items-center gap-1 text-sm font-medium">
-          <a
-            href="#servicios"
-            class="hidden rounded-lg px-3 py-2 text-slate-600 transition hover:bg-slate-100 hover:text-slate-900 sm:inline-block"
-            >Servicios</a
-          >
-          <a
-            href="#apps"
-            class="hidden rounded-lg px-3 py-2 text-slate-600 transition hover:bg-slate-100 hover:text-slate-900 sm:inline-block"
-            >Apps</a
-          >
-          <a
-            href="#contacto"
-            class="ml-1 rounded-lg bg-slate-900 px-4 py-2 text-white transition hover:bg-slate-700"
-            >Contacto</a
-          >
+
+        <nav aria-label="Principal" class="hidden items-center gap-1 text-sm font-medium md:flex">
+          <a href="#servicios" class="rounded-full px-3.5 py-2 text-zinc-600 transition-colors hover:bg-zinc-950/5 hover:text-zinc-950">Servicios</a>
+          <a href="#proceso" class="rounded-full px-3.5 py-2 text-zinc-600 transition-colors hover:bg-zinc-950/5 hover:text-zinc-950">Proceso</a>
+          <a href="#proyectos" class="rounded-full px-3.5 py-2 text-zinc-600 transition-colors hover:bg-zinc-950/5 hover:text-zinc-950">Proyectos</a>
+          <a href="#contacto" class="ml-2 inline-flex items-center gap-1.5 rounded-full bg-zinc-950 px-4 py-2 text-white transition-colors hover:bg-zinc-800">
+            Hablemos
+            <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+          </a>
         </nav>
+
+        <!-- Menú móvil sin JavaScript: <details> abre y cierra solo. -->
+        <details class="group relative md:hidden">
+          <summary class="flex size-10 cursor-pointer list-none items-center justify-center rounded-full text-zinc-950 hover:bg-zinc-950/5 [&::-webkit-details-marker]:hidden">
+            <span class="sr-only">Abrir menú</span>
+            <svg class="size-5 group-open:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+            <svg class="hidden size-5 group-open:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg>
+          </summary>
+          <nav aria-label="Principal" class="absolute top-12 right-0 w-56 rounded-2xl border border-zinc-200 bg-white p-2 shadow-xl shadow-zinc-950/10">
+            <a href="#servicios" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-700 hover:bg-zinc-100">Servicios</a>
+            <a href="#proceso" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-700 hover:bg-zinc-100">Proceso</a>
+            <a href="#proyectos" class="block rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-700 hover:bg-zinc-100">Proyectos</a>
+            <a href="#contacto" class="mt-1 block rounded-xl bg-zinc-950 px-3 py-2.5 text-center text-sm font-medium text-white">Hablemos</a>
+          </nav>
+        </details>
       </div>
     </header>
 
     <main id="contenido">
-      <!-- Inicio -->
-      <section id="inicio" class="relative overflow-hidden">
-        <div
-          aria-hidden="true"
-          class="pointer-events-none absolute -top-40 right-[-10rem] h-[32rem] w-[32rem] rounded-full bg-emerald-200/40 blur-3xl"
-        ></div>
-        <div
-          class="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 md:grid-cols-2 md:py-28"
-        >
-          <div>
-            <p
-              class="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-sm font-medium text-emerald-800"
-            >
-              <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
-              Desarrollo de software y QA
-            </p>
-            <h1 class="mt-6 text-4xl font-bold tracking-tight text-balance text-slate-900 sm:text-5xl">
-              Software esencial, <span class="text-emerald-600">hecho con calidad.</span>
-            </h1>
-            <p class="mt-6 max-w-xl text-lg leading-relaxed text-pretty text-slate-600">
-              Somos Essential Coder. Diseñamos, desarrollamos y probamos aplicaciones móviles y web,
-              con la calidad integrada desde la primera línea de código.
-            </p>
-            <div class="mt-8 flex flex-wrap gap-3">
-              <a
-                href="#apps"
-                class="rounded-xl bg-emerald-600 px-5 py-3 font-semibold text-white shadow-sm transition hover:bg-emerald-700"
-                >Conoce nuestras apps</a
-              >
-              <a
-                href="#servicios"
-                class="rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-800 transition hover:border-slate-400 hover:bg-slate-50"
-                >Qué hacemos</a
-              >
-            </div>
-          </div>
+      <!-- ───────────────────────── Inicio ───────────────────────── -->
+      <section id="inicio" class="relative isolate overflow-hidden">
+        <div aria-hidden="true" class="bg-grid absolute inset-0 -z-10"></div>
+        <div aria-hidden="true" class="absolute -top-24 left-1/2 -z-10 h-[28rem] w-[56rem] -translate-x-1/2 rounded-full bg-gradient-to-b from-emerald-200/60 to-teal-100/0 blur-3xl"></div>
 
-          <!-- Ilustración: un pipeline de integración continua en verde. -->
-          <div
-            aria-hidden="true"
-            class="rounded-2xl bg-slate-900 p-6 font-mono text-sm text-slate-300 shadow-2xl ring-1 shadow-slate-900/20 ring-white/10"
-          >
-            <div class="flex gap-1.5">
-              <span class="h-3 w-3 rounded-full bg-rose-400/80"></span>
-              <span class="h-3 w-3 rounded-full bg-amber-400/80"></span>
-              <span class="h-3 w-3 rounded-full bg-emerald-400/80"></span>
+        <div class="mx-auto grid max-w-6xl items-center gap-16 px-4 pt-16 pb-20 sm:px-6 sm:pt-24 lg:grid-cols-[1.15fr_1fr] lg:px-8 lg:pt-28 lg:pb-28">
+          <div>
+            <p class="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white/70 px-3 py-1 text-xs font-medium text-zinc-700 shadow-sm backdrop-blur">
+              <span class="relative flex size-2">
+                <span class="absolute inline-flex size-full rounded-full bg-emerald-400 opacity-60 motion-safe:animate-ping"></span>
+                <span class="relative inline-flex size-2 rounded-full bg-emerald-500"></span>
+              </span>
+              Desarrollo de software · Calidad · QA
+            </p>
+
+            <h1 class="mt-6 text-5xl font-semibold tracking-tighter text-balance text-zinc-950 sm:text-6xl lg:text-7xl">
+              Software que funciona.
+              <span class="block bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 bg-clip-text text-transparent">Y lo probamos.</span>
+            </h1>
+
+            <p class="mt-6 max-w-xl text-lg leading-8 text-pretty text-zinc-600">
+              En Essential Coder diseñamos, desarrollamos y mantenemos apps móviles, plataformas web y
+              APIs. Cada entrega pasa por pruebas automatizadas antes de llegar a tus usuarios.
+            </p>
+
+            <div class="mt-10 flex flex-wrap items-center gap-3">
+              <a href="#contacto" class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-zinc-950 px-6 py-3.5 text-sm font-medium text-white shadow-lg shadow-zinc-950/15 sm:w-auto transition hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600">
+                Cuéntanos tu proyecto
+                <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+              </a>
+              <a href="#proyectos" class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-medium text-zinc-950 ring-1 sm:w-auto ring-zinc-950/10 transition hover:bg-zinc-50 hover:ring-zinc-950/20">
+                Ver nuestro trabajo
+              </a>
             </div>
-            <p class="mt-5 text-slate-500">$ git push origin main</p>
-            <ul class="mt-4 space-y-3">
-              <li class="flex items-center gap-3">
-                <svg class="h-4 w-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                Lint y formato
+
+            <ul class="mt-10 flex flex-col gap-3 text-sm text-zinc-600 sm:flex-row sm:flex-wrap sm:gap-x-6">
+              <li class="flex items-center gap-2">
+                <svg class="size-5 shrink-0 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>
+                Pruebas en cada entrega
               </li>
-              <li class="flex items-center gap-3">
-                <svg class="h-4 w-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                Tipos
+              <li class="flex items-center gap-2">
+                <svg class="size-5 shrink-0 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>
+                Seguridad desde el diseño
               </li>
-              <li class="flex items-center gap-3">
-                <svg class="h-4 w-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                Pruebas automatizadas
-              </li>
-              <li class="flex items-center gap-3">
-                <svg class="h-4 w-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-                Build y despliegue
+              <li class="flex items-center gap-2">
+                <svg class="size-5 shrink-0 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>
+                Publicación en tiendas
               </li>
             </ul>
-            <p class="mt-6 border-t border-white/10 pt-4 text-emerald-400">Listo para producción</p>
+          </div>
+
+          <!-- Ilustración: CityScout, una app real nuestra, con su integración continua. -->
+          <div class="relative mx-auto w-full max-w-md lg:max-w-none">
+            <div aria-hidden="true" class="absolute inset-x-8 top-10 bottom-0 -z-10 rounded-[3rem] bg-gradient-to-tr from-emerald-500/20 via-teal-400/10 to-transparent blur-2xl"></div>
+
+            <div class="relative mx-auto w-60 sm:mr-4 sm:ml-auto sm:w-64 lg:mr-8">
+              <div class="rounded-[2.75rem] bg-zinc-950 p-2.5 shadow-2xl shadow-zinc-950/30 ring-1 ring-zinc-950/10">
+                <img
+                  src="assets/cityscout-explore.webp"
+                  srcset="assets/cityscout-explore.webp 1x, assets/cityscout-explore@2x.webp 2x"
+                  width="390"
+                  height="844"
+                  alt="App CityScout: lista de lugares cercanos con filtros por distancia y categoría"
+                  class="w-full rounded-[2.25rem]"
+                  fetchpriority="high"
+                />
+              </div>
+            </div>
+
+            <!-- Tarjeta de integración continua -->
+            <div aria-hidden="true" class="absolute top-28 left-0 hidden w-56 rounded-2xl border border-zinc-200/80 bg-white/95 p-4 shadow-xl shadow-zinc-950/10 backdrop-blur sm:block">
+              <div class="flex items-center justify-between">
+                <p class="font-mono text-[11px] font-medium text-zinc-500">ci · main</p>
+                <span class="rounded-full bg-emerald-50 px-2 py-0.5 text-[11px] font-medium text-emerald-700 ring-1 ring-emerald-600/20">Aprobado</span>
+              </div>
+              <ul class="mt-3 space-y-2 text-[13px] text-zinc-700">
+                <li class="flex items-center gap-2"><svg class="size-4 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Lint y formato</li>
+                <li class="flex items-center gap-2"><svg class="size-4 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Tipos estrictos</li>
+                <li class="flex items-center gap-2"><svg class="size-4 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Pruebas automatizadas</li>
+                <li class="flex items-center gap-2"><svg class="size-4 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Auditoría de dependencias</li>
+              </ul>
+            </div>
+
+            <!-- Tarjeta de publicación -->
+            <div aria-hidden="true" class="absolute right-0 bottom-10 flex items-center gap-3 rounded-2xl border border-zinc-200/80 bg-white/95 p-3 pr-4 shadow-xl shadow-zinc-950/10 backdrop-blur">
+              <img src="assets/cityscout-logo.webp" width="40" height="40" alt="" class="size-10 rounded-xl" />
+              <div>
+                <p class="text-sm font-semibold text-zinc-950">CityScout</p>
+                <p class="text-xs text-zinc-500">Disponible en Google Play</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Servicios -->
-      <section id="servicios" class="border-t border-slate-100 bg-slate-50 py-20 md:py-24">
-        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <!-- ───────────────────────── Tecnologías ───────────────────────── -->
+      <section aria-labelledby="tecnologias-titulo" class="border-y border-zinc-950/5 bg-zinc-50/70">
+        <div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 sm:px-6 lg:flex-row lg:items-center lg:gap-10 lg:px-8">
+          <h2 id="tecnologias-titulo" class="shrink-0 text-sm font-medium text-zinc-500">Tecnologías con las que trabajamos</h2>
+          <ul class="flex flex-wrap gap-2">
+            <li class="rounded-full bg-white px-3.5 py-1.5 text-sm font-medium text-zinc-700 ring-1 ring-zinc-950/10">Flutter</li>
+            <li class="rounded-full bg-white px-3.5 py-1.5 text-sm font-medium text-zinc-700 ring-1 ring-zinc-950/10">React</li>
+            <li class="rounded-full bg-white px-3.5 py-1.5 text-sm font-medium text-zinc-700 ring-1 ring-zinc-950/10">TypeScript</li>
+            <li class="rounded-full bg-white px-3.5 py-1.5 text-sm font-medium text-zinc-700 ring-1 ring-zinc-950/10">Node.js</li>
+            <li class="rounded-full bg-white px-3.5 py-1.5 text-sm font-medium text-zinc-700 ring-1 ring-zinc-950/10">PostgreSQL</li>
+            <li class="rounded-full bg-white px-3.5 py-1.5 text-sm font-medium text-zinc-700 ring-1 ring-zinc-950/10">Redis</li>
+            <li class="rounded-full bg-white px-3.5 py-1.5 text-sm font-medium text-zinc-700 ring-1 ring-zinc-950/10">Docker</li>
+            <li class="rounded-full bg-white px-3.5 py-1.5 text-sm font-medium text-zinc-700 ring-1 ring-zinc-950/10">Tailwind CSS</li>
+            <li class="rounded-full bg-white px-3.5 py-1.5 text-sm font-medium text-zinc-700 ring-1 ring-zinc-950/10">Vercel</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ───────────────────────── Servicios ───────────────────────── -->
+      <section id="servicios" aria-labelledby="servicios-titulo" class="py-24 sm:py-32">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div class="max-w-2xl">
-            <p class="text-sm font-semibold tracking-wide text-emerald-700 uppercase">Servicios</p>
-            <h2 class="mt-2 text-3xl font-bold tracking-tight text-balance text-slate-900">
-              De la idea a la tienda de aplicaciones
+            <p class="text-sm font-semibold text-emerald-700">Servicios</p>
+            <h2 id="servicios-titulo" class="mt-3 text-3xl font-semibold tracking-tight text-balance text-zinc-950 sm:text-4xl">
+              Del primer boceto a la tienda de aplicaciones
             </h2>
-            <p class="mt-4 text-lg text-pretty text-slate-600">
-              Nos ocupamos del producto completo: diseño, código, pruebas y publicación.
+            <p class="mt-4 text-lg leading-8 text-pretty text-zinc-600">
+              Nos ocupamos del producto completo: diseño, código, pruebas, publicación y
+              mantenimiento. Un solo equipo, sin piezas sueltas.
             </p>
           </div>
-          <div class="mt-12 grid gap-6 md:grid-cols-3">
-            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-              <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700">
-                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" /><path d="M12 18h.01" /></svg>
+
+          <div class="mt-16 grid gap-5 sm:grid-cols-2">
+            <article class="group relative rounded-3xl border border-zinc-200 bg-white p-8 transition hover:border-zinc-300 hover:shadow-xl hover:shadow-zinc-950/5">
+              <div class="flex size-11 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 ring-1 ring-emerald-600/15">
+                <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" /><path d="M12 18h.01" /></svg>
               </div>
-              <h3 class="mt-5 text-lg font-semibold text-slate-900">Apps móviles</h3>
-              <p class="mt-2 leading-relaxed text-slate-600">
-                Aplicaciones para Android e iOS, desde el diseño de pantallas hasta la publicación en
-                Google Play y App Store.
-              </p>
+              <h3 class="mt-6 text-lg font-semibold text-zinc-950">Apps móviles</h3>
+              <p class="mt-2 leading-7 text-zinc-600">Aplicaciones para Android e iOS con Flutter, listas para publicar en Google Play y App Store.</p>
+              <ul class="mt-6 space-y-2.5 border-t border-zinc-100 pt-6 text-sm text-zinc-700">
+                <li class="flex gap-2.5"><svg class="mt-0.5 size-4 shrink-0 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Diseño de interfaz y experiencia de uso</li>
+                <li class="flex gap-2.5"><svg class="mt-0.5 size-4 shrink-0 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Mapas, notificaciones y compras dentro de la app</li>
+                <li class="flex gap-2.5"><svg class="mt-0.5 size-4 shrink-0 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Publicación y actualizaciones en las tiendas</li>
+              </ul>
             </article>
-            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-              <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700">
-                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6" /><path d="m8 6-6 6 6 6" /></svg>
+
+            <article class="group relative rounded-3xl border border-zinc-200 bg-white p-8 transition hover:border-zinc-300 hover:shadow-xl hover:shadow-zinc-950/5">
+              <div class="flex size-11 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 ring-1 ring-emerald-600/15">
+                <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1" /><rect width="7" height="5" x="14" y="3" rx="1" /><rect width="7" height="9" x="14" y="12" rx="1" /><rect width="7" height="5" x="3" y="16" rx="1" /></svg>
               </div>
-              <h3 class="mt-5 text-lg font-semibold text-slate-900">Web y APIs</h3>
-              <p class="mt-2 leading-relaxed text-slate-600">
-                Sitios rápidos, paneles de administración y backends seguros que conectan tus apps con
-                tus datos.
-              </p>
+              <h3 class="mt-6 text-lg font-semibold text-zinc-950">Web y paneles</h3>
+              <p class="mt-2 leading-7 text-zinc-600">Sitios rápidos y paneles de administración con React y TypeScript, pensados para crecer.</p>
+              <ul class="mt-6 space-y-2.5 border-t border-zinc-100 pt-6 text-sm text-zinc-700">
+                <li class="flex gap-2.5"><svg class="mt-0.5 size-4 shrink-0 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Landing pages optimizadas para buscadores</li>
+                <li class="flex gap-2.5"><svg class="mt-0.5 size-4 shrink-0 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Paneles con roles y permisos</li>
+                <li class="flex gap-2.5"><svg class="mt-0.5 size-4 shrink-0 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Sitios en varios idiomas</li>
+              </ul>
             </article>
-            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-              <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700">
-                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></svg>
+
+            <article class="group relative rounded-3xl border border-zinc-200 bg-white p-8 transition hover:border-zinc-300 hover:shadow-xl hover:shadow-zinc-950/5">
+              <div class="flex size-11 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 ring-1 ring-emerald-600/15">
+                <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" /><rect width="20" height="8" x="2" y="14" rx="2" /><path d="M6 6h.01M6 18h.01" /></svg>
               </div>
-              <h3 class="mt-5 text-lg font-semibold text-slate-900">Calidad (QA)</h3>
-              <p class="mt-2 leading-relaxed text-slate-600">
-                Pruebas automatizadas, revisión de código e integración continua en cada entrega, no
-                solo al final.
-              </p>
+              <h3 class="mt-6 text-lg font-semibold text-zinc-950">Backend y APIs</h3>
+              <p class="mt-2 leading-7 text-zinc-600">APIs seguras y escalables con Node.js y PostgreSQL, documentadas para que cualquier equipo las use.</p>
+              <ul class="mt-6 space-y-2.5 border-t border-zinc-100 pt-6 text-sm text-zinc-700">
+                <li class="flex gap-2.5"><svg class="mt-0.5 size-4 shrink-0 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Autenticación con verificación en dos pasos</li>
+                <li class="flex gap-2.5"><svg class="mt-0.5 size-4 shrink-0 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Documentación OpenAPI generada desde el código</li>
+                <li class="flex gap-2.5"><svg class="mt-0.5 size-4 shrink-0 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Pagos y suscripciones</li>
+              </ul>
+            </article>
+
+            <article class="group relative rounded-3xl border border-zinc-200 bg-white p-8 transition hover:border-zinc-300 hover:shadow-xl hover:shadow-zinc-950/5">
+              <div class="flex size-11 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 ring-1 ring-emerald-600/15">
+                <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></svg>
+              </div>
+              <h3 class="mt-6 text-lg font-semibold text-zinc-950">Calidad y QA</h3>
+              <p class="mt-2 leading-7 text-zinc-600">Pruebas automatizadas, revisión de código e integración continua. La calidad no se deja para el final.</p>
+              <ul class="mt-6 space-y-2.5 border-t border-zinc-100 pt-6 text-sm text-zinc-700">
+                <li class="flex gap-2.5"><svg class="mt-0.5 size-4 shrink-0 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Pruebas unitarias, de integración y de extremo a extremo</li>
+                <li class="flex gap-2.5"><svg class="mt-0.5 size-4 shrink-0 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Integración y despliegue continuos</li>
+                <li class="flex gap-2.5"><svg class="mt-0.5 size-4 shrink-0 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Auditorías de seguridad y de dependencias</li>
+              </ul>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Apps -->
-      <section id="apps" class="py-20 md:py-24">
-        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <!-- ───────────────────────── Proceso ───────────────────────── -->
+      <section id="proceso" aria-labelledby="proceso-titulo" class="border-t border-zinc-950/5 bg-zinc-50/70 py-24 sm:py-32">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div class="max-w-2xl">
-            <p class="text-sm font-semibold tracking-wide text-emerald-700 uppercase">Nuestras apps</p>
-            <h2 class="mt-2 text-3xl font-bold tracking-tight text-balance text-slate-900">
-              Productos que construimos y mantenemos
+            <p class="text-sm font-semibold text-emerald-700">Proceso</p>
+            <h2 id="proceso-titulo" class="mt-3 text-3xl font-semibold tracking-tight text-balance text-zinc-950 sm:text-4xl">
+              Cómo trabajamos
+            </h2>
+            <p class="mt-4 text-lg leading-8 text-pretty text-zinc-600">
+              Entregas cortas y visibles. Sabes en todo momento qué está hecho, qué sigue y cómo se
+              comprobó.
+            </p>
+          </div>
+
+          <ol class="mt-16 grid gap-px overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-200 sm:grid-cols-2 lg:grid-cols-4">
+            <li class="bg-white p-8">
+              <p class="font-mono text-sm font-medium text-emerald-700">01</p>
+              <h3 class="mt-4 text-lg font-semibold text-zinc-950">Descubrimiento</h3>
+              <p class="mt-2 text-sm leading-6 text-zinc-600">Entendemos el problema, a tus usuarios y tus objetivos, y definimos juntos el alcance.</p>
+            </li>
+            <li class="bg-white p-8">
+              <p class="font-mono text-sm font-medium text-emerald-700">02</p>
+              <h3 class="mt-4 text-lg font-semibold text-zinc-950">Diseño</h3>
+              <p class="mt-2 text-sm leading-6 text-zinc-600">Prototipos y arquitectura antes de escribir código, para validar pronto y sin sorpresas.</p>
+            </li>
+            <li class="bg-white p-8">
+              <p class="font-mono text-sm font-medium text-emerald-700">03</p>
+              <h3 class="mt-4 text-lg font-semibold text-zinc-950">Desarrollo con pruebas</h3>
+              <p class="mt-2 text-sm leading-6 text-zinc-600">Cada cambio llega con sus pruebas automatizadas y pasa por revisión antes de integrarse.</p>
+            </li>
+            <li class="bg-white p-8">
+              <p class="font-mono text-sm font-medium text-emerald-700">04</p>
+              <h3 class="mt-4 text-lg font-semibold text-zinc-950">Lanzamiento y soporte</h3>
+              <p class="mt-2 text-sm leading-6 text-zinc-600">Publicamos en tiendas y servidores, vigilamos que todo funcione y seguimos mejorando.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ───────────────────────── Proyectos ───────────────────────── -->
+      <section id="proyectos" aria-labelledby="proyectos-titulo" class="relative isolate overflow-hidden bg-zinc-950 py-24 text-zinc-400 sm:py-32">
+        <div aria-hidden="true" class="bg-grid-dark absolute inset-0 -z-10"></div>
+        <div aria-hidden="true" class="absolute top-1/3 right-0 -z-10 h-96 w-96 rounded-full bg-emerald-500/20 blur-3xl"></div>
+
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl">
+            <p class="text-sm font-semibold text-emerald-400">Caso de estudio</p>
+            <h2 id="proyectos-titulo" class="mt-3 text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl">
+              CityScout: de la idea a Google Play
             </h2>
           </div>
 
-          <article
-            class="mt-12 grid items-center gap-10 overflow-hidden rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-emerald-50/60 p-6 shadow-sm sm:p-10 md:grid-cols-[1fr_auto]"
-          >
+          <div class="mt-16 grid items-center gap-16 lg:grid-cols-2">
             <div>
               <div class="flex items-center gap-4">
-                <img
-                  src="assets/cityscout-logo.webp"
-                  alt="Logotipo de CityScout"
-                  width="64"
-                  height="64"
-                  class="h-16 w-16 rounded-2xl shadow-sm"
-                />
+                <img src="assets/cityscout-logo.webp" width="56" height="56" alt="Logotipo de CityScout" class="size-14 rounded-2xl ring-1 ring-white/10" />
                 <div>
-                  <h3 class="text-2xl font-bold tracking-tight text-slate-900">CityScout</h3>
-                  <p class="text-slate-600">Descubre lo mejor de cada ciudad</p>
+                  <h3 class="text-xl font-semibold text-white">CityScout</h3>
+                  <p class="text-sm text-zinc-400">Descubre lo mejor de cada ciudad</p>
                 </div>
               </div>
-              <p class="mt-6 max-w-xl leading-relaxed text-pretty text-slate-600">
-                La app de turismo para descubrir lugares cerca de ti, guardar tus favoritos y leer
+              <p class="mt-6 text-lg leading-8 text-pretty text-zinc-300">
+                Una plataforma de turismo para descubrir lugares cercanos, guardar favoritos y leer
                 reseñas reales. Los negocios locales publican su ficha y llegan a más visitantes.
               </p>
-              <ul class="mt-6 flex flex-wrap gap-2 text-sm font-medium text-slate-700">
-                <li class="rounded-full border border-slate-200 bg-white px-3 py-1">Android</li>
-                <li class="rounded-full border border-slate-200 bg-white px-3 py-1">Gratis para viajeros</li>
-                <li class="rounded-full border border-slate-200 bg-white px-3 py-1">Español e inglés</li>
+
+              <h4 class="mt-10 text-sm font-semibold text-white">Lo que construimos</h4>
+              <ul class="mt-4 grid gap-3 text-sm sm:grid-cols-2">
+                <li class="flex items-center gap-2.5"><svg class="size-4 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>App móvil para Android</li>
+                <li class="flex items-center gap-2.5"><svg class="size-4 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>API y backend</li>
+                <li class="flex items-center gap-2.5"><svg class="size-4 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Panel de administración</li>
+                <li class="flex items-center gap-2.5"><svg class="size-4 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Sitio web en español e inglés</li>
               </ul>
-              <div class="mt-8 flex flex-wrap gap-3">
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.cityscout.app"
-                  class="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-5 py-3 font-semibold text-white transition hover:bg-slate-700"
-                  >Descargar en Google Play</a
-                >
-                <a
-                  href="https://cityscout.qaessential.dev/"
-                  class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-800 transition hover:border-slate-400 hover:bg-slate-50"
-                >
-                  Sitio web
-                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
+
+              <dl class="mt-10 grid grid-cols-3 gap-px overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/10">
+                <div class="flex flex-col gap-1 bg-zinc-950/80 p-5">
+                  <dt class="text-xs leading-5 text-zinc-400">Pruebas automatizadas</dt>
+                  <dd class="order-first text-2xl font-semibold tracking-tight text-white sm:text-3xl">500+</dd>
+                </div>
+                <div class="flex flex-col gap-1 bg-zinc-950/80 p-5">
+                  <dt class="text-xs leading-5 text-zinc-400">Operaciones de API documentadas</dt>
+                  <dd class="order-first text-2xl font-semibold tracking-tight text-white sm:text-3xl">150+</dd>
+                </div>
+                <div class="flex flex-col gap-1 bg-zinc-950/80 p-5">
+                  <dt class="text-xs leading-5 text-zinc-400">Idiomas en la web</dt>
+                  <dd class="order-first text-2xl font-semibold tracking-tight text-white sm:text-3xl">2</dd>
+                </div>
+              </dl>
+
+              <ul class="mt-8 flex flex-wrap gap-2" aria-label="Tecnologías de CityScout">
+                <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-zinc-300 ring-1 ring-white/10">Flutter</li>
+                <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-zinc-300 ring-1 ring-white/10">Node.js</li>
+                <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-zinc-300 ring-1 ring-white/10">TypeScript</li>
+                <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-zinc-300 ring-1 ring-white/10">PostgreSQL + PostGIS</li>
+                <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-zinc-300 ring-1 ring-white/10">Redis</li>
+                <li class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-zinc-300 ring-1 ring-white/10">React</li>
+              </ul>
+
+              <div class="mt-10 flex flex-wrap gap-3">
+                <a href="https://play.google.com/store/apps/details?id=com.cityscout.app" class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200">
+                  <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 3.5v17a.5.5 0 0 0 .77.42l13-8.5a.5.5 0 0 0 0-.84l-13-8.5A.5.5 0 0 0 6 3.5Z" /></svg>
+                  Ver en Google Play
+                </a>
+                <a href="https://cityscout.qaessential.dev/" class="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium text-white ring-1 ring-white/20 transition hover:bg-white/10">
+                  Visitar el sitio
+                  <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
                 </a>
               </div>
-              <p class="mt-6 text-sm text-slate-500">
-                <a
-                  class="underline underline-offset-4 hover:text-slate-800"
-                  href="https://cityscout.qaessential.dev/politica-privacidad.html"
-                  >Política de privacidad</a
-                >
-                <span aria-hidden="true" class="mx-2">·</span>
-                <a
-                  class="underline underline-offset-4 hover:text-slate-800"
-                  href="https://cityscout.qaessential.dev/terminos-condiciones.html"
-                  >Términos y condiciones</a
-                >
-              </p>
             </div>
-            <img
-              src="assets/cityscout-explore.webp"
-              srcset="assets/cityscout-explore.webp 1x, assets/cityscout-explore@2x.webp 2x"
-              alt="Pantalla de CityScout con la lista de lugares cercanos y filtros por distancia y categoría"
-              width="390"
-              height="844"
-              loading="lazy"
-              class="mx-auto hidden w-56 rounded-[2rem] border-[6px] border-slate-900 shadow-2xl shadow-slate-900/25 sm:block"
-            />
-          </article>
+
+            <!-- Tres pantallas reales de la app -->
+            <div class="relative mx-auto flex w-full max-w-lg items-center justify-center" aria-label="Pantallas de la app CityScout" role="group">
+              <div class="relative z-0 -mr-10 hidden w-44 translate-y-8 -rotate-6 sm:block">
+                <div class="rounded-[2.25rem] bg-zinc-800 p-2 shadow-2xl ring-1 ring-white/10">
+                  <img src="assets/cityscout-map.webp" srcset="assets/cityscout-map.webp 1x, assets/cityscout-map@2x.webp 2x" width="390" height="844" loading="lazy" alt="Mapa con los lugares cercanos" class="w-full rounded-[1.75rem]" />
+                </div>
+              </div>
+              <div class="relative z-10 w-56 sm:w-60">
+                <div class="rounded-[2.5rem] bg-zinc-800 p-2.5 shadow-2xl shadow-black/50 ring-1 ring-white/15">
+                  <img src="assets/cityscout-detail.webp" srcset="assets/cityscout-detail.webp 1x, assets/cityscout-detail@2x.webp 2x" width="390" height="844" loading="lazy" alt="Ficha de un lugar con horarios, fotos y reseñas" class="w-full rounded-[2rem]" />
+                </div>
+              </div>
+              <div class="relative z-0 -ml-10 hidden w-44 translate-y-8 rotate-6 sm:block">
+                <div class="rounded-[2.25rem] bg-zinc-800 p-2 shadow-2xl ring-1 ring-white/10">
+                  <img src="assets/cityscout-explore.webp" srcset="assets/cityscout-explore.webp 1x, assets/cityscout-explore@2x.webp 2x" width="390" height="844" loading="lazy" alt="Lista de lugares cercanos con filtros" class="w-full rounded-[1.75rem]" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- Contacto -->
-      <section id="contacto" class="bg-slate-900 py-20 text-slate-300 md:py-24">
-        <div class="mx-auto max-w-6xl px-4 sm:px-6">
-          <div class="max-w-2xl">
-            <p class="text-sm font-semibold tracking-wide text-emerald-400 uppercase">Contacto</p>
-            <h2 class="mt-2 text-3xl font-bold tracking-tight text-balance text-white">
-              ¿Una pregunta o necesitas soporte?
+      <!-- ───────────────────────── Principios ───────────────────────── -->
+      <section aria-labelledby="principios-titulo" class="py-24 sm:py-32">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center">
+            <p class="text-sm font-semibold text-emerald-700">Por qué Essential Coder</p>
+            <h2 id="principios-titulo" class="mt-3 text-3xl font-semibold tracking-tight text-balance text-zinc-950 sm:text-4xl">
+              Lo esencial, bien hecho
             </h2>
-            <p class="mt-4 text-lg text-pretty">
-              Escríbenos y te respondemos lo antes posible.
-            </p>
-            <a
-              href="mailto:soporte@cityscout.app"
-              class="mt-8 inline-flex items-center gap-3 rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-slate-950 transition hover:bg-emerald-400"
-            >
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
-              soporte@cityscout.app
+          </div>
+
+          <div class="mt-16 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <div class="flex size-10 items-center justify-center rounded-lg bg-zinc-950 text-white">
+                <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2" /><path d="M8.5 2h7" /><path d="M7 16h10" /></svg>
+              </div>
+              <h3 class="mt-5 font-semibold text-zinc-950">Calidad verificable</h3>
+              <p class="mt-2 text-sm leading-6 text-zinc-600">Cada cambio pasa por pruebas automatizadas antes de llegar a producción. No lo prometemos: lo comprobamos.</p>
+            </div>
+            <div>
+              <div class="flex size-10 items-center justify-center rounded-lg bg-zinc-950 text-white">
+                <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+              </div>
+              <h3 class="mt-5 font-semibold text-zinc-950">Seguridad desde el diseño</h3>
+              <p class="mt-2 text-sm leading-6 text-zinc-600">Sesiones seguras, datos cifrados y permisos mínimos desde la primera línea, no como parche.</p>
+            </div>
+            <div>
+              <div class="flex size-10 items-center justify-center rounded-lg bg-zinc-950 text-white">
+                <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 16 4-4-4-4" /><path d="m6 8-4 4 4 4" /><path d="m14.5 4-5 16" /></svg>
+              </div>
+              <h3 class="mt-5 font-semibold text-zinc-950">Código mantenible</h3>
+              <p class="mt-2 text-sm leading-6 text-zinc-600">Arquitectura clara y documentada, para que tu producto crezca sin tener que rehacerlo.</p>
+            </div>
+            <div>
+              <div class="flex size-10 items-center justify-center rounded-lg bg-zinc-950 text-white">
+                <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
+              </div>
+              <h3 class="mt-5 font-semibold text-zinc-950">Comunicación directa</h3>
+              <p class="mt-2 text-sm leading-6 text-zinc-600">Hablas con quien construye tu producto y ves avances reales en cada entrega.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────────────────── Contacto ───────────────────────── -->
+      <section id="contacto" aria-labelledby="contacto-titulo" class="px-4 pb-24 sm:px-6 sm:pb-32 lg:px-8">
+        <div class="relative isolate mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-zinc-950 px-6 py-16 text-center shadow-2xl sm:px-16 sm:py-24">
+          <div aria-hidden="true" class="bg-grid-dark absolute inset-0 -z-10"></div>
+          <div aria-hidden="true" class="absolute -bottom-32 left-1/2 -z-10 h-80 w-[40rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-emerald-500/40 to-teal-400/30 blur-3xl"></div>
+
+          <h2 id="contacto-titulo" class="mx-auto max-w-2xl text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl">
+            ¿Tienes un proyecto en mente?
+          </h2>
+          <p class="mx-auto mt-4 max-w-xl text-lg leading-8 text-pretty text-zinc-300">
+            Cuéntanos qué necesitas: una app, una plataforma web o una API. Te respondemos con los
+            siguientes pasos.
+          </p>
+          <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+            <a href="mailto:soporte@cityscout.app?subject=Proyecto%20con%20Essential%20Coder" class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-medium text-zinc-950 shadow-lg transition hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-400">
+              <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+              Escríbenos
+            </a>
+            <a href="#servicios" class="inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-medium text-white ring-1 ring-white/20 transition hover:bg-white/10">
+              Ver servicios
             </a>
           </div>
+          <p class="mt-6 text-sm text-zinc-400">soporte@cityscout.app</p>
         </div>
       </section>
     </main>
 
-    <footer class="border-t border-white/10 bg-slate-950 py-8 text-sm text-slate-400">
-      <div
-        class="mx-auto flex max-w-6xl flex-col gap-4 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6"
-      >
-        <p>© Essential Coder · qaessential.dev</p>
-        <nav aria-label="Pie de página" class="flex gap-6">
-          <a class="hover:text-white" href="https://cityscout.qaessential.dev/">CityScout</a>
-          <a class="hover:text-white" href="https://cityscout.qaessential.dev/politica-privacidad.html"
-            >Privacidad</a
-          >
+    <!-- ───────────────────────── Pie ───────────────────────── -->
+    <footer class="border-t border-zinc-950/5">
+      <div class="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[2fr_1fr_1fr] lg:px-8">
+        <div>
+          <a href="#inicio" class="inline-flex items-center gap-2.5">
+            <img src="favicon.svg" width="28" height="28" alt="" class="size-7" />
+            <span class="font-semibold tracking-tight text-zinc-950">Essential Coder</span>
+          </a>
+          <p class="mt-4 max-w-xs text-sm leading-6 text-zinc-500">
+            Apps móviles, plataformas web y APIs con la calidad como estándar.
+          </p>
+        </div>
+        <nav aria-label="Secciones">
+          <h2 class="text-sm font-semibold text-zinc-950">Empresa</h2>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a href="#servicios" class="text-zinc-500 transition-colors hover:text-zinc-950">Servicios</a></li>
+            <li><a href="#proceso" class="text-zinc-500 transition-colors hover:text-zinc-950">Proceso</a></li>
+            <li><a href="#proyectos" class="text-zinc-500 transition-colors hover:text-zinc-950">Proyectos</a></li>
+            <li><a href="#contacto" class="text-zinc-500 transition-colors hover:text-zinc-950">Contacto</a></li>
+          </ul>
         </nav>
+        <nav aria-label="CityScout">
+          <h2 class="text-sm font-semibold text-zinc-950">CityScout</h2>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a href="https://cityscout.qaessential.dev/" class="text-zinc-500 transition-colors hover:text-zinc-950">Sitio web</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.cityscout.app" class="text-zinc-500 transition-colors hover:text-zinc-950">Google Play</a></li>
+            <li><a href="https://cityscout.qaessential.dev/politica-privacidad.html" class="text-zinc-500 transition-colors hover:text-zinc-950">Privacidad</a></li>
+            <li><a href="https://cityscout.qaessential.dev/terminos-condiciones.html" class="text-zinc-500 transition-colors hover:text-zinc-950">Términos</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="border-t border-zinc-950/5">
+        <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-6 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+          <p>© Essential Coder</p>
+          <p>qaessential.dev</p>
+        </div>
       </div>
     </footer>
   </body>
