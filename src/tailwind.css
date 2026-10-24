@@ -9,11 +9,55 @@
 
 @source '../index.html';
 
-html {
-  scroll-behavior: smooth;
+/*
+ * Geist (SIL OFL 1.1, ver assets/fonts/OFL-Geist.txt), autoalojada: sin
+ * peticiones a terceros. Un solo fichero variable cubre todos los pesos.
+ * La URL es relativa a assets/styles.css, que es donde acaba esta regla.
+ */
+@font-face {
+  font-family: 'Geist';
+  src: url('fonts/Geist-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* Que la cabecera fija no tape el título de la sección al saltar desde el menú. */
-section[id] {
-  scroll-margin-top: 4rem;
+@theme {
+  --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Retícula tenue de fondo que se desvanece hacia abajo. */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(24 24 27 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(24 24 27 / 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+}
+
+/* La misma retícula para fondos oscuros. */
+@utility bg-grid-dark {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 30%, black 30%, transparent 100%);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Que la cabecera fija no tape el título de la sección al saltar desde el menú. */
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
 }
